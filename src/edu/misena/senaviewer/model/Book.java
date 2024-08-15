@@ -30,6 +30,7 @@ public class Book {
     public void setId(int id) {
         this.id = id;
     }
+    //
 
     public String getTitle(){
         return title;
@@ -38,6 +39,7 @@ public class Book {
     public void setTitle(String title){
         this.title = title;
     }
+    //
 
     public Date getEditionDate(){
         return editionDate;
@@ -46,6 +48,7 @@ public class Book {
     public void setEditionDate(Date editionDate){
         this.editionDate = editionDate;
     }
+    //
 
     public String getEditorial(){
         return editorial;
@@ -54,6 +57,7 @@ public class Book {
     public void setEditorial(String editorial){
         this.editorial = editorial;
     }
+    //
 
     public String getAuthors(){
         return authors;
@@ -62,6 +66,7 @@ public class Book {
     public void setAuthors(String authors){
         this.authors = authors;
     }
+    //
 
     public String getisbn(){
         return isbn;
@@ -70,6 +75,7 @@ public class Book {
     public void setIsbn(String isbn){
         this.isbn = isbn;
     }
+    //
 
     public Boolean getReaded(){
         return readed;
@@ -78,6 +84,7 @@ public class Book {
     public void setReaded(Boolean read){
         this.readed = readed;
     }
+    //
 
     public int getTimeReaded(){
         return timeReaded;
