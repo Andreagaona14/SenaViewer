@@ -1,7 +1,5 @@
 package edu.misena.senaviewer.model;
 
-import java.util.Date;
-
 public class Movie {
 
     //Atributos
@@ -15,7 +13,7 @@ public class Movie {
     private int timeViewed;
 
     //Constructor
-    public Movie(String title, String gender, String creator, int duration, int year ){
+    public Movie(String title, String gender, String creator, int i, int duration, Boolean viewed, int year ){
         this.title = title;
         this.gender = gender;
         this.creator = creator;
