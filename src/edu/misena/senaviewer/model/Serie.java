@@ -18,6 +18,7 @@ public class Serie {
         this.title = title;
         this.gender = gender;
         this.duration = duration;
+        this.viewed = true;
     }
 
     // Getter y Setter

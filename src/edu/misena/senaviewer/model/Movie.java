@@ -21,6 +21,7 @@ public class Movie {
         this.creator = creator;
         this.duration = duration;
         this.year = year;
+        this.viewed = true;
     }
 
     // Getter y Setter
