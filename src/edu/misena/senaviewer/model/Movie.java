@@ -13,13 +13,16 @@ public class Movie {
     private int timeViewed;
 
     //Constructor
-    public Movie(String title, String gender, String creator, int i, int duration, Boolean viewed, int year ){
+    public Movie( String title, String gender, String creator,  int duration, Boolean viewed, int year ){
         this.title = title;
         this.gender = gender;
         this.creator = creator;
         this.duration = duration;
         this.year = year;
         this.viewed = true;
+    }
+
+    public Movie(String title, String genre, String creator, String duration, int year) {
     }
 
     // Getter y Setter

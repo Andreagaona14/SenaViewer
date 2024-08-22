@@ -18,6 +18,10 @@ public class Main {
                                 methods.methodMovie.watchMovies();
                                 break;
                             case 2:
+                                methods.methodMovie.addMovie();
+                                break;
+                            default:
+                                System.out.println("Opción inválida.");
                                 break;
                         }
                     }
@@ -32,6 +36,10 @@ public class Main {
                                 methods.methodSerie.watchSeries();
                                 break;
                             case 2:
+                               methods.methodSerie.addSeries();
+                                break;
+                            default:
+                                System.out.println("Opción inválida.");
                                 break;
                         }
                     }
@@ -45,6 +53,7 @@ public class Main {
                                 methods.methodBook.watchBooks();
                                 break;
                             case 2:
+                                methods.methodBook.addBook();
                                 break;
                         }
                     }
@@ -58,6 +67,7 @@ public class Main {
                                 methods.methodMagazines.watchMagazines();
                                 break;
                             case 2:
+                                methods.methodMagazines.addMagazines();
                                 break;
                         }
                     }

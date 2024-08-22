@@ -52,7 +52,7 @@ public class methods {
     public class methodMovie{
         private static List<Movie> movies = new ArrayList<>();
 
-        public static void addMovie(){
+        public static void addMovie() {
             Scanner scanner = new Scanner(System.in);
 
             System.out.println("Ingrese el título de la película:");
@@ -65,18 +65,28 @@ public class methods {
             String creator = scanner.nextLine();
 
             System.out.println("Ingrese la duración:");
-            int duration = scanner.nextInt();
+            String duration = scanner.nextLine();
 
             System.out.println("Ingrese el año:");
             int year = scanner.nextInt();
 
-            System.out.println("¿Ya viste esta pelicula?:");
-            Boolean viewed = scanner.nextBoolean();
+            Movie newMovie = new Movie(title, genre, creator, duration, year);
 
-            System.out.println("Ingrese el tiempo que viste la película:");
-            int timeViewed = scanner.nextInt();
 
-            Movie newMovie = new Movie(title, genre, creator, duration, year, viewed, timeViewed);
+            System.out.println("Ingrese el Id:");
+            int Id = scanner.nextInt();
+            newMovie.setId(Id);
+
+            System.out.println("¿la has visto?(true/false):");
+            boolean visto = scanner.nextBoolean();
+            scanner.nextLine();
+            newMovie.setViewed(visto);
+
+            System.out.println("¿Cuántos minutos has tardado en vertela ?");
+            int tiempo = scanner.nextInt();
+            scanner.nextLine();
+            newMovie.setTimeViewed(tiempo);
+
             movies.add(newMovie);
             System.out.println("Película agregada con éxito");
         }
@@ -104,6 +114,24 @@ public class methods {
     public class methodSerie{
         private static List<Serie> series = new ArrayList<>();
 
+        public static void addSeries() {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Ingrese el título de la serie:");
+            String title = scanner.nextLine();
+
+            System.out.println("Ingrese el género:");
+            String genre = scanner.nextLine();
+
+            System.out.println("Ingrese la duración:");
+            int duration = scanner.nextInt();
+
+            Serie newSerie = new Serie(title, genre, duration);
+            series.add(newSerie);
+            System.out.println("Serie agregada con éxito");
+        }
+
+
         public static void watchSeries() {
             if (series.isEmpty()) { // verifica que si hay datos dentro de este y continua
                 System.out.println("No hay series disponibles.");
@@ -128,6 +156,48 @@ public class methods {
     public class methodBook{
         private static List<Book> books = new ArrayList<>();
 
+       public static void addBook() {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Ingrese el título del libro:");
+            String title = scanner.nextLine();
+
+            System.out.println("Ingrese la fecha de edición (YYYY-MM-DD):");
+            String editionDate = scanner.nextLine();
+
+            System.out.println("Ingrese la editorial:");
+            String editorial = scanner.nextLine();
+
+            System.out.println("Ingrese el ISBN:");
+            int isbn = scanner.nextInt();
+            scanner.nextLine(); // Consumir el salto de línea residual
+
+            Book newBook = new Book(title, editionDate, editorial, isbn);
+
+            System.out.println("Ingrese el autor:");
+            String autor = scanner.nextLine();
+            newBook.setAuthors(autor);
+
+            System.out.println("Ingrese el Id:");
+            int id = scanner.nextInt();
+            scanner.nextLine(); // Consumir el salto de línea residual
+            newBook.setId(id);
+
+            System.out.println("Ingrese si ha leído el libro (true/false):");
+            boolean leido = scanner.nextBoolean();
+            scanner.nextLine(); // Consumir el salto de línea residual
+            newBook.setReaded(leido);
+
+            System.out.println("¿Cuántos minutos ha tardado en leerlo?");
+            int tiempoLeido = scanner.nextInt();
+            scanner.nextLine(); // Consumir el salto de línea residual
+            newBook.setTimeReaded(tiempoLeido);
+
+            books.add(newBook);
+            System.out.println("Libro agregado con éxito");
+        }
+
+
         public static void watchBooks() {
             if (books.isEmpty()){ // verifica que si hay datos dentro de este y continua
                 System.out.println("No hay libros disponibles.");
@@ -149,6 +219,23 @@ public class methods {
 
     public class methodMagazines{
         private static List<Magazine> magazines = new ArrayList<>();
+
+        public static void addMagazines() {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Ingrese el título de la revista:");
+            String title = scanner.nextLine();
+
+            System.out.println("Ingrese la fecha de edición:");
+            int edititionDate = scanner.nextInt();
+
+            System.out.println("Ingrese la editorial:");
+            String editorial = scanner.nextLine();
+
+            Magazine newMagazine = new Magazine(title, edititionDate, editorial);
+            magazines.add(newMagazine);
+            System.out.println("Revista agregada con éxito");
+        }
 
         public static void watchMagazines() {
             if (magazines.isEmpty()) { // verifica que si hay datos dentro de este y continua
