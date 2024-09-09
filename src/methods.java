@@ -65,7 +65,7 @@ public class methods {
             String creator = scanner.nextLine();
 
             System.out.println("Ingrese la duración:");
-            String duration = scanner.nextLine();
+            int duration = scanner.nextInt();
 
             System.out.println("Ingrese el año:");
             int year = scanner.nextInt();

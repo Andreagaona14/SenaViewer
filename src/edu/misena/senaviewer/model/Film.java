@@ -3,13 +3,13 @@ package edu.misena.senaviewer.model;
 public class Film {
 
     //Atributos
-    private int id;
-    private String title;
-    private String gender;
-    private String creator;
-    private int duration;
-    private int year;
-    private Boolean viewed;
+    public int id;
+    public String title;
+    public String gender;
+    public String creator;
+    public int duration;
+    public int year;
+    public Boolean viewed;
 
     //Constructor
     public Film (String title, String gender, String creator, int duration){
