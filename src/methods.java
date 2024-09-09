@@ -121,12 +121,21 @@ public class methods {
             String title = scanner.nextLine();
 
             System.out.println("Ingrese el género:");
-            String genre = scanner.nextLine();
+            String gender = scanner.nextLine();
+
+            System.out.println("Ingrese el creador:");
+            String creator = scanner.nextLine();
 
             System.out.println("Ingrese la duración:");
             int duration = scanner.nextInt();
 
-            Serie newSerie = new Serie(title, genre, duration);
+            System.out.println("Ingrese la duración:");
+            int timeViewed = scanner.nextInt();
+
+            System.out.println("Ingrese la duración:");
+            int sessionQuantity = scanner.nextInt();
+
+            Serie newSerie = new Serie(title, gender, creator, duration, timeViewed, sessionQuantity);
             series.add(newSerie);
             System.out.println("Serie agregada con éxito");
         }
