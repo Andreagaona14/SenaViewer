@@ -230,21 +230,28 @@ public class methods {
             System.out.println("Ingrese el título de la revista:");
             String title = scanner.nextLine();
 
+
             System.out.println("Ingrese el autor:");
             String authors= scanner.nextLine();
 
+
             System.out.println("Ingrese el id:");
             int id = scanner.nextInt();
+            scanner.nextLine();
 
             System.out.println("Ingrese la fecha de edición (YYYY-MM-DD):");
             String editionDate = scanner.nextLine();
 
+
             System.out.println("Ingrese la editorial:");
             String editorial = scanner.nextLine();
+
 
             Magazine newMagazine = new Magazine(title, editionDate, editorial, id, authors);
             magazines.add(newMagazine);
             System.out.println("Revista agregada con éxito");
+            System.out.println(editionDate);
+
         }
 
         public static void watchMagazines() {
