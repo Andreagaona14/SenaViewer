@@ -9,8 +9,8 @@ public class Book extends Publication {
        private int timeReaded;
 
        //Constructor
-    public Book(String title, String editionDate, String editorial, int isbn, int id, boolean readed, int timeReaded){
-       super(title, editionDate, editorial);
+    public Book(String title, String authors, String editionDate, String editorial, int isbn, int id, boolean readed, int timeReaded){
+       super(title, editionDate, editorial, authors);
        this.id = id;
        this.isbn = isbn;
        this.readed = readed;
@@ -52,5 +52,19 @@ public class Book extends Publication {
 
     public void setTimeReaded(int timeReaded){
         this.timeReaded = timeReaded;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "Id=" + getId() +
+                ", Título='" + getTitle() + '\'' +
+                ", Fecha de edición='" + getEditionDate() + '\'' +
+                ", Editorial='" + getEditorial() + '\'' +
+                ", Isbn='" + getisbn() + '\'' +
+                ", ¡Leiste el libro?='" + getReaded() + '\'' +
+                ", Tiempo en el que leiste ='" + getTimeReaded() + '\'' +
+                ", Autor=" + getAuthors()  +
+                '}';
     }
 }

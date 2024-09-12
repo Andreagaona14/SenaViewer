@@ -129,23 +129,26 @@ public class methods {
             System.out.println("Ingrese la duración:");
             int duration = scanner.nextInt();
 
-            System.out.println("Ingrese la duración:");
+            System.out.println("Ingrese si la ha visto :");
+            boolean viewed = scanner.nextBoolean();
+
+            System.out.println("Ingresa el tiempo en que la viste:");
             int timeViewed = scanner.nextInt();
 
-            System.out.println("Ingrese la duración:");
+            System.out.println("N de temporadas:");
             int sessionQuantity = scanner.nextInt();
 
-            Serie newSerie = new Serie(title, gender, creator, duration, timeViewed, sessionQuantity);
+            Serie newSerie = new Serie(title, gender, creator, duration,viewed, timeViewed, sessionQuantity);
             series.add(newSerie);
             System.out.println("Serie agregada con éxito");
         }
 
 
         public static void watchSeries() {
-            if (series.isEmpty()) { // verifica que si hay datos dentro de este y continua
+            if (series.isEmpty()) {
                 System.out.println("No hay series disponibles.");
             } else {
-                System.out.println("Lista de películas:");
+                System.out.println("Lista de series:");
                 for (Serie serie : series) {
                     System.out.println("Id: " + serie.getId());
                     System.out.println("Título: " + serie.getTitle());
@@ -155,7 +158,7 @@ public class methods {
                     System.out.println("Año: " + serie.getYear());
                     System.out.println("Visto: " + (serie.getViewed() ? "Sí" : "No"));
                     System.out.println("Tiempo visto: " + serie.getTimeViewed() + " minutos");
-                    System.out.println("Temporadas: " + serie.getsessionQuantity());
+                    System.out.println("Temporadas: " + serie.getSessionQuantity());
                     System.out.println();
                 }
             }
@@ -171,6 +174,9 @@ public class methods {
             System.out.println("Ingrese el título del libro:");
             String title = scanner.nextLine();
 
+           System.out.println("Ingrese el autor:");
+           String authors = scanner.nextLine();
+
             System.out.println("Ingrese la fecha de edición (YYYY-MM-DD):");
             String editionDate = scanner.nextLine();
 
@@ -183,14 +189,14 @@ public class methods {
             System.out.println("Ingrese el id:");
           int id = scanner.nextInt();
 
-           System.out.println("Ingrese la editorial:");
+           System.out.println("¿La viste toda?:");
            boolean readed = scanner.nextBoolean();
 
-           System.out.println("Ingrese la editorial:");
+           System.out.println("Tiempo que tardo:");
            int timeReaded = scanner.nextInt();
            scanner.nextLine();
 
-           Book newBook = new Book(title, editionDate, editorial, isbn, id, readed, timeReaded);
+           Book newBook = new Book(title, authors, editionDate, editorial, isbn, id, readed, timeReaded);
            books.add(newBook);
             System.out.println("Libro agregado con éxito");
         }
@@ -224,13 +230,19 @@ public class methods {
             System.out.println("Ingrese el título de la revista:");
             String title = scanner.nextLine();
 
-            System.out.println("Ingrese la fecha de edición:");
-            int edititionDate = scanner.nextInt();
+            System.out.println("Ingrese el autor:");
+            String authors= scanner.nextLine();
+
+            System.out.println("Ingrese el id:");
+            int id = scanner.nextInt();
+
+            System.out.println("Ingrese la fecha de edición (YYYY-MM-DD):");
+            String editionDate = scanner.nextLine();
 
             System.out.println("Ingrese la editorial:");
             String editorial = scanner.nextLine();
 
-            Magazine newMagazine = new Magazine(title, edititionDate, editorial);
+            Magazine newMagazine = new Magazine(title, editionDate, editorial, id, authors);
             magazines.add(newMagazine);
             System.out.println("Revista agregada con éxito");
         }

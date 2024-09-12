@@ -9,10 +9,11 @@ public class Publication {
     String authors;
 
     //Constructor
-    public  Publication (String title, String editionDate, String editorial){
+    public  Publication (String title, String editionDate, String editorial, String authors){
         this.title = title;
         this.editionDate = editionDate;
         this.editorial = editorial;
+        this.authors = authors;
 
     }
 

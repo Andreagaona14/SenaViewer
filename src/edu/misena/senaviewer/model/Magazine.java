@@ -1,20 +1,15 @@
 package edu.misena.senaviewer.model;
 
 
-public class Magazine {
+public class Magazine extends Publication {
 
     //Atributos
     private int id;
-    private String title;
-    private int editionDate;
-    private String editorial;
-    private String authors;
 
     //Constructor
-    public Magazine(String title, int editionDate,String editorial){
-        this.title = title;
-        this.editionDate = editionDate;
-        this.editorial = editorial;
+    public Magazine(String title, String editionDate,String editorial, int id, String authors){
+        super(title, editionDate, editorial, authors);
+        this.id = id;
     }
 
     // Getter y Setter
@@ -25,41 +20,15 @@ public class Magazine {
     public void setId(int id) {
         this.id = id;
     }
-    //
 
-    public String getTitle(){
-        return title;
+    @Override
+    public String toString() {
+        return "Magazine{" +
+                "Id=" + getId() +
+                ", Título='" + getTitle() + '\'' +
+                ", Fecha de edición='" + getEditionDate() + '\'' +
+                ", Editorial='" + getEditorial() + '\'' +
+                ", Autor=" + getAuthors()  +
+                '}';
     }
-
-    public void setTitle(String title){
-        this.title = title;
-    }
-    //
-
-    public int getEditionDate(){
-        return editionDate;
-    }
-
-    public void setEditionDate(int editionDate){
-        this.editionDate = editionDate;
-    }
-    //
-
-    public String getEditorial(){
-        return editorial;
-    }
-
-    public void setEditorial(String editorial){
-        this.editorial = editorial;
-    }
-    //
-
-    public String getAuthors(){
-        return authors;
-    }
-
-    public void setAuthors(String authors){
-        this.authors = authors;
-    }
-
 }
