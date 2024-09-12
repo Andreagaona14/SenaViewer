@@ -1,23 +1,21 @@
 package edu.misena.senaviewer.model;
 
-public class Book {
+/*public class Book extends Publication {
 
     //Atributos
        private int id;
-       private String title;
-       private String editionDate;
-       private String editorial;
-       private String authors;
        private int isbn;
        private Boolean readed;
        private int timeReaded;
 
        //Constructor
-    public Book(String title, String editionDate, String editorial, int isbn){
-        this.title = title;
-        this.editionDate = editionDate;
-        this.editorial = editorial;
-        this.isbn = isbn;
+    public Book(String title, String editionDate, String editorial, int isbn, String id, String readed, String timeReaded){
+       super(title, editionDate, editorial);
+       this.id = id;
+       this.isbn = isbn;
+       this.readed = readed;
+       this.timeReaded = timeReaded;
+
     }
 
     // Getter y Setter
@@ -27,42 +25,6 @@ public class Book {
 
     public void setId(int id) {
         this.id = id;
-    }
-    //
-
-    public String getTitle(){
-        return title;
-    }
-
-    public void setTitle(String title){
-        this.title = title;
-    }
-    //
-
-    public String getEditionDate(){
-        return editionDate;
-    }
-
-    public void setEditionDate(String editionDate){
-        this.editionDate = editionDate;
-    }
-    //
-
-    public String getEditorial(){
-        return editorial;
-    }
-
-    public void setEditorial(String editorial){
-        this.editorial = editorial;
-    }
-    //
-
-    public String getAuthors(){
-        return authors;
-    }
-
-    public void setAuthors(String authors){
-        this.authors = authors;
     }
     //
 
@@ -92,3 +54,4 @@ public class Book {
         this.timeReaded = timeReaded;
     }
 }
+*/

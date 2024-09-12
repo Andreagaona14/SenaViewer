@@ -179,9 +179,18 @@ public class methods {
 
             System.out.println("Ingrese el ISBN:");
             int isbn = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea residual
 
-            Book newBook = new Book(title, editionDate, editorial, isbn);
+            System.out.println("Ingrese el id:");
+           String id = scanner.nextLine();
+
+           System.out.println("Ingrese la editorial:");
+           String readed = scanner.nextLine();
+
+           System.out.println("Ingrese la editorial:");
+           String timeReaded = scanner.nextLine();
+           scanner.nextLine();
+
+           Book newBook = new Book(title, editionDate, editorial, isbn, id, readed, timeReaded);
 
             System.out.println("Ingrese el autor:");
             String autor = scanner.nextLine();
@@ -189,17 +198,17 @@ public class methods {
 
             System.out.println("Ingrese el Id:");
             int id = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea residual
+            scanner.nextLine();
             newBook.setId(id);
 
             System.out.println("Ingrese si ha leído el libro (true/false):");
             boolean leido = scanner.nextBoolean();
-            scanner.nextLine(); // Consumir el salto de línea residual
+            scanner.nextLine();
             newBook.setReaded(leido);
 
             System.out.println("¿Cuántos minutos ha tardado en leerlo?");
             int tiempoLeido = scanner.nextInt();
-            scanner.nextLine(); // Consumir el salto de línea residual
+            scanner.nextLine();
             newBook.setTimeReaded(tiempoLeido);
 
             books.add(newBook);
