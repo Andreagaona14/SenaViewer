@@ -1,6 +1,6 @@
 package edu.misena.senaviewer.model;
 
-/*public class Book extends Publication {
+public class Book extends Publication {
 
     //Atributos
        private int id;
@@ -9,7 +9,7 @@ package edu.misena.senaviewer.model;
        private int timeReaded;
 
        //Constructor
-    public Book(String title, String editionDate, String editorial, int isbn, String id, String readed, String timeReaded){
+    public Book(String title, String editionDate, String editorial, int isbn, int id, boolean readed, int timeReaded){
        super(title, editionDate, editorial);
        this.id = id;
        this.isbn = isbn;
@@ -54,4 +54,3 @@ package edu.misena.senaviewer.model;
         this.timeReaded = timeReaded;
     }
 }
-*/

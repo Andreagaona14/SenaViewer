@@ -181,37 +181,17 @@ public class methods {
             int isbn = scanner.nextInt();
 
             System.out.println("Ingrese el id:");
-           String id = scanner.nextLine();
+          int id = scanner.nextInt();
 
            System.out.println("Ingrese la editorial:");
-           String readed = scanner.nextLine();
+           boolean readed = scanner.nextBoolean();
 
            System.out.println("Ingrese la editorial:");
-           String timeReaded = scanner.nextLine();
+           int timeReaded = scanner.nextInt();
            scanner.nextLine();
 
            Book newBook = new Book(title, editionDate, editorial, isbn, id, readed, timeReaded);
-
-            System.out.println("Ingrese el autor:");
-            String autor = scanner.nextLine();
-            newBook.setAuthors(autor);
-
-            System.out.println("Ingrese el Id:");
-            int id = scanner.nextInt();
-            scanner.nextLine();
-            newBook.setId(id);
-
-            System.out.println("Ingrese si ha leído el libro (true/false):");
-            boolean leido = scanner.nextBoolean();
-            scanner.nextLine();
-            newBook.setReaded(leido);
-
-            System.out.println("¿Cuántos minutos ha tardado en leerlo?");
-            int tiempoLeido = scanner.nextInt();
-            scanner.nextLine();
-            newBook.setTimeReaded(tiempoLeido);
-
-            books.add(newBook);
+           books.add(newBook);
             System.out.println("Libro agregado con éxito");
         }
 
