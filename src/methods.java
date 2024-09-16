@@ -222,7 +222,7 @@ public class methods {
     }
 
     public class methodMagazines{
-        private static List<Magazine> magazines = 
+        private static List<Magazine> magazines = new ArrayList<>();
 
         public static void addMagazines() {
             Scanner scanner = new Scanner(System.in);
